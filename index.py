@@ -8,7 +8,7 @@ class MyHandler(http.server.SimpleHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(bytes("Hola mundo!", "utf-8"))
 
-server = http.server.HTTPServer(('localhost', 5000), MyHandler)
+server = http.server.HTTPServer(('0.0.0.0', 5000), MyHandler)
 
 
 server.serve_forever()
